@@ -131,7 +131,20 @@ footer p {
     font-family: "Noto Sans JP", sans-serif;
 }
 
-/* カルーセル */
+/* TOPに戻る */
+.back_button {
+    display: none;
+    
+    position: fixed;
+    bottom: 38px;
+    right: 20px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 28px 24px;
+    border-radius: 50%;
+}
 
 
 /* 横幅が767pxまでの場合 */

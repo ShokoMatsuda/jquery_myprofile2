@@ -1,4 +1,5 @@
 $(function () {
+    // カルーセル
     $('.carousel').slick({
         autoplay: true,
         dots: true,
@@ -23,10 +24,24 @@ $(function () {
         const scrollSize = $(this).scrollTop();
         if (scrollSize > 100){
             $('.back_button').css('display', 'inline');
-             $('.back_button').fadeIn();
         } else {
             $('.back_button').css('display', 'none');
-            // $('.back_button').fadeOUT();
         }
     });
+
+    // ページ内リンクのスクロールをなめらかにする
+     $('a[href^="#"]').click(function() {
+        const speed = 1000;
+         const href = $(this).attr('href');
+         let $target;
+         if (href == '#') {
+            $target = $('html');
+         }
+         else {
+            $target = $(href);
+         }
+         const position = $target.offset().top;
+         $('html, body').animate({ 'scrollTop': position }, speed, 'swing');
+         return false;
+     });
 });

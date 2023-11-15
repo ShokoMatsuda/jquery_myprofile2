@@ -44,4 +44,29 @@ $(function () {
          $('html, body').animate({ 'scrollTop': position }, speed, 'swing');
          return false;
      });
+
+    //  $('a[href^="#"]').on('click', () => {
+    //     const speed = 1000;
+    //      const href = $(this).attr('href');
+    //      let $target;
+    //      if (href == '#') {
+    //         $target = $('html');
+    //      }
+    //      else {
+    //         $target = $(href);
+    //      }
+    //      const position = $target.offset().top;
+    //      $('html, body').animate({ 'scrollTop': position }, speed, 'swing');
+    //      return false;
+    //  });
+
+    // スクロールした時にセクションをフェードインさせる
+
+    // Worksの画像をクリックしたときにモーダルで拡大表示する
+    $('.works img').click(function() {
+        const result = $(this).attr('src');
+        $('.big-img').attr('src', result);
+        $('.modal').fadeIn();
+        return false
+    });
 });

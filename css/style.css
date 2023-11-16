@@ -178,6 +178,16 @@ footer p {
     text-decoration: none;
 }
 
+section {
+    opacity: 0;
+    transition: 1s;
+} 
+
+.fade-in {
+    opacity: 1;
+}
+
+
 /* 横幅が767pxまでの場合 */
 @media (max-width: 767px) {
     .item {

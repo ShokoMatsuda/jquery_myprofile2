@@ -61,6 +61,18 @@ $(function () {
     //  });
 
     // スクロールした時にセクションをフェードインさせる
+    $(window).scroll(function() {
+        // スクロール量を取得する
+        const scrollAmount = $(window).scrollTop();
+        // ビューポートの量を取得する
+        const windowHeight = $(window).height();
+        $('section').each(function() {
+            const position = $(this).offset().top;
+            if (scrollAmount > position - windowHeight + 100) {
+                $(this).addClass('fade-in');
+            }
+        });
+    });
 
     // Worksの画像をクリックしたときにモーダルで拡大表示する
     $('.works img').click(function() {

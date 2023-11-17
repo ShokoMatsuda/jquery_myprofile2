@@ -74,6 +74,21 @@ $(function () {
         });
     });
 
+    // スクロールした時にセクションをフェードインさせる2
+    // $(window).scroll(function () {
+    //     // sectionまでの距離を取得する
+    //     const position = $('section').offset().top;
+    //     // console.log(position);
+    //     //スクロール量を取得する
+    //     const scrollAmount = $(window).scrollTop();
+    //     // console.log(scrollAmount);
+    //     $('section').each(function () {
+    //         if (scrollAmount > position) {
+    //             $(this).addClass('fade-in')
+    //         }
+    //     });
+    // });
+
     // Worksの画像をクリックしたときにモーダルで拡大表示する
     $('.works img').click(function() {
         const result = $(this).attr('src');

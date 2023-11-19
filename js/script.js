@@ -68,6 +68,7 @@ $(function () {
         const windowHeight = $(window).height();
         $('section').each(function() {
             const position = $(this).offset().top;
+            console.log({scrollAmount:scrollAmount, position:position, sum:position - windowHeight + 100});
             if (scrollAmount > position - windowHeight + 100) {
                 $(this).addClass('fade-in');
             }
